@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tm.tages</title>
+    <link href="css/ng-tm.tags.css"  rel="stylesheet" >
+    <script src="js/angular.min.js"></script>
+    <script src="js/ng-tm.tags.min.js"></script>
+    <script>
+        var appModule = angular.module('myApp', ['tm.tags']);
+        appModule.controller('MyCtrl', function ($scope, $http) {
+            $scope.list = [{txt:'测试'}
+            ];
+            $scope.list1 = [{txt:'测试2'}
+            ];
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="MyCtrl">
+<tags conf="list"></tags>
+<tags conf="list1"></tags>
+
+<div style="margin-top: 20px;margin-left: 40px">
+    {{list}}
+</div>
+<div style="margin-top: 20px;margin-left: 40px">
+    {{list1}}
+</div>
+</body>
+</html>
